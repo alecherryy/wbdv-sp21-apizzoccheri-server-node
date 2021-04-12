@@ -1,0 +1,19 @@
+{
+  "name": "wbdv-sp21-apizzoccheri-server-node",
+  "version": "1.0.0",
+  "description": "Node server for CS5610",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecherryy/wbdv-sp21-apizzoccheri-server-node.git"
+  },
+  "author": "Alessia Pizzoccheri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alecherryy/wbdv-sp21-apizzoccheri-server-node/issues"
+  },
+  "homepage": "https://github.com/alecherryy/wbdv-sp21-apizzoccheri-server-node#readme"
+}
