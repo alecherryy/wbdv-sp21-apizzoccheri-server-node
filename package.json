@@ -12,11 +12,7 @@
   },
   "author": "Alessia Pizzoccheri",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alecherryy/wbdv-sp21-apizzoccheri-server-node/issues"
-  },
-  "homepage": "https://github.com/alecherryy/wbdv-sp21-apizzoccheri-server-node#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.17.1"
   }
 }
