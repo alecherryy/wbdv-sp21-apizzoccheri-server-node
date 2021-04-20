@@ -19,7 +19,7 @@ const findQuestionById = (questionId) => {
 /**
  * FIND QUESTION BY QUIZ
  */
-const findQuestionsForQuiz = (quizId) => {
+const findQuestionsForQuiz = (qid) => {
   return questionsModel.find({ qid });
 }
 

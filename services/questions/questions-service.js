@@ -1,11 +1,11 @@
-const questions = require('./questions.json')
+const questionsDao = require('../../daos/questions-dao')
 
 /**
  * FIND ALL QUESTIONS
  *
  */
 const findAllQuestions = () => {
-  return questions
+  return questionsDao.findAllQuestions();
 }
 
 /**
@@ -13,11 +13,11 @@ const findAllQuestions = () => {
  *
  */
 const findQuestionsByQuiz = (quizId) => {
-  return questions.filter(question => question.quizId === quizId)
+  return questionsDao.findQuestionsForQuiz(quizId);
 }
 
 const findQuestionById = (questionId) => {
-  return questions.find(question => question._id === questionId)
+  return questionsDao.findQuestionById(questionId);
 }
 
 const createQuestion = () => {}

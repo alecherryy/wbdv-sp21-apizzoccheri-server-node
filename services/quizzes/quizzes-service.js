@@ -1,14 +1,11 @@
-/**
- * ARRAY OF QUIZZES
- */
-const quizzes = require('./quizzes.json');
+const quizzesDao = require('../../daos/quizzes-dao')
 
 /**
  * FIND ALL QUIZZES
  * @return all quizzes
  */
 const findAllQuizzes = () => {
-  return quizzes;
+  return quizzesDao.findAllQuizzes();
 }
 
 /**
@@ -16,7 +13,7 @@ const findAllQuizzes = () => {
  * @return quiz
  */
 const findQuizById = (qid) => {
-  return quizzes.find(quiz => quiz._id === qid)
+  return quizzesDao.findQuizById(qid);
 }
 
 const createQuiz = () => {}
@@ -24,5 +21,5 @@ const updateQuiz = () => {}
 const deleteQuiz = () => {}
 
 module.exports = {
-  findAllQuizzes, findQuizById, createQuiz, updateQuiz, deleteQuiz
+  findAllQuizzes, findQuizById
 }

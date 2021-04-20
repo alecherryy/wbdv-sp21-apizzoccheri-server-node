@@ -12,9 +12,9 @@ module.exports = (app) => {
   }
 
   const findQuizById = (req, res) => {
-    const quizId = req.params['quizId']
+    const qid = req.params['qid']
 
-    res.json(quizService.findQuizById(quizId))
+    res.json(quizService.findQuizById(qid))
   }
 
   app.get("/api/quizzes", findAllQuizzes)
