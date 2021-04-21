@@ -1,22 +1,15 @@
-const quizService = require('../services/quizzes/quizzes-service')
+const quizzesService = require('../services/quizzes/quizzes-service')
 
 /**
  * Define controller for quizzes
  *
  * @param {func} app controller for the quiz
  */
-module.exports = (app) => {
-
-  const findAllQuizzes = (req, res) => {
-    res.send(quizService.findAllQuizzes())
-  }
-
-  const findQuizById = (req, res) => {
-    const qid = req.params['qid']
-
-    res.json(quizService.findQuizById(qid))
-  }
-
-  app.get("/api/quizzes", findAllQuizzes)
-  app.get("/api/quizzes/:quizId", findQuizById)
+module.exports = function (app) {
+  app.get('/api/quizzes', (req, res) =>
+    quizzesService.findAllQuizzes()
+      .then(allQuizzes => res.json(allQuizzes)))
+  app.get('/api/quizzes/:qid', (req, res) =>
+    quizzesService.findQuizById(req.params['qid'])
+      .then(quiz => res.json(quiz)))
 }

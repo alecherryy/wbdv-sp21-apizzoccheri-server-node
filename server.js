@@ -3,8 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-let port = process.env.PORT || 3000
-
 mongoose.connect(
   'mongodb+srv://user:user@cluster0.sjzpg.mongodb.net/test',
   {
@@ -24,10 +22,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(bodyParser.urlencoded({
-  extended: false
-}))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
 
 require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
